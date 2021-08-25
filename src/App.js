@@ -1,13 +1,27 @@
-import MyComponent from "./components/MyComponent";
-import NavBar from "./components/NavBar/NavBar";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 
-function App() {
+//Pages
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/404";
+import AnotherPage from "./pages/AnotherPage";
+
+const App = () => {
   return (
-    <div>
-      <MyComponent />
-      <NavBar />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/another" component={AnotherPage} />
+        <Route path="/404" component={NotFoundPage} />
+        <Redirect to="/404" />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
