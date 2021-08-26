@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar/NavBar";
 import NOPHOTO from "../assets/no-image.jpg";
+import GridView from "../components/GridView";
 
 function MovieDetailsPage() {
   return (
@@ -47,6 +48,15 @@ function MovieDetailsPage() {
           <h3 className="flex justify-center  text-xl font-bold">
             Writer: Frank Darabont
           </h3>
+          <h3 className="flex justify-center  text-xl font-bold">
+            Company: Castle Rock Entertainment
+          </h3>
+          <h3 className="flex justify-center  text-xl font-bold">
+            Country: USA
+          </h3>
+          <h3 className="flex justify-center  text-xl font-bold">
+            Language: English
+          </h3>
         </div>
         <div className="my-2 py-4 flex justify-evenly flex-col  text-gray-600 bg-blue-300">
           <div className=" flex justify-center  text-xl font-bold bg-gray-300">
@@ -61,8 +71,20 @@ function MovieDetailsPage() {
           <h3 className="flex justify-center  text-xl font-bold">
             Genre: Drama
           </h3>
+          <h3 className="flex justify-center  text-xl font-bold">
+            Content Rating: R (R)
+          </h3>
+          <h3 className="flex justify-center  text-xl font-bold">
+            Awards: Top Rated Movies #1 | Nominated for 7 Oscars. Another 21
+            wins & 36 nominations.
+          </h3>
         </div>
       </div>
+
+      <center>
+        <h1 className="text-blue-500 text-5xl font-bold">Cast</h1>
+        <GridView />
+      </center>
     </div>
   );
 }
