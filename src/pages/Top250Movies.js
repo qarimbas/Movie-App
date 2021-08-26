@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar/NavBar";
-import NOPHOTO from "../assets/no-image.jpg";
+import ListItem from "../components/ListItem/ListItem";
 
 function Top250Movies() {
   return (
@@ -9,13 +9,15 @@ function Top250Movies() {
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Top 250 Movies</h1>
 
-        <div className=" flex justify-center flex-row ..">
-          <img className="h-48 w-48" src={NOPHOTO} />
-          <div className="flex flex-col ..">
-            <text className="mt-10"> Movie Name</text>
-            <text className="mt-8">Movie Description</text>
-          </div>
+        <div className="my-5 py-3 flex justify-center flex-row  bg-blue-300">
+          <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RANK</h3>
+          <h3 className="flex-1 ... text-blue-500 text-xl font-bold">TITLE</h3>
+          <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RATE</h3>
         </div>
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
       </center>
     </div>
   );
