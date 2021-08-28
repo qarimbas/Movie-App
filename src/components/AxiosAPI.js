@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-function AxiosAPI() {
+function axiosAPI() {
   //const axios = require("axios");
 
   function showOutput(res) {
@@ -56,4 +56,4 @@ function AxiosAPI() {
     });
 }
 
-export default AxiosAPI;
+export default axiosAPI;
