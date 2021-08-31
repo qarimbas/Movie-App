@@ -38,7 +38,9 @@ function axiosAPI() {
 
   return axios
     .get("https://imdb-api.com/en/API/Top250Movies/k_hha1j719")
-    .then((res) => showOutput(res))
+    .then((response) => {
+      showOutput(response);
+    })
     .catch((err) => {
       if (err.response) {
         console.log(err.response.data);
