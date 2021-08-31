@@ -1,7 +1,23 @@
+import React from 'react';
 import NavBar from "../components/NavBar/NavBar";
 import ListItem from "../components/ListItem/ListItem";
+import {useDispatch, useSelector} from "react-redux";
+import {moviesActions} from '../shared/store/actions/movies.actions';
+import {IMDB_Id} from "../shared/constants/imdb.constants";
+import {getMoviesDataSelector} from "../shared/store/selectors/movies.selectors";
 
-function Top250Movies() {
+const Top250Movies = () => {
+    const dispatch = useDispatch();
+    const moviesData = useSelector(getMoviesDataSelector);
+
+    React.useEffect(() => {
+        loadMovie();
+    }, []);
+
+    const loadMovie = () => {
+        dispatch(moviesActions.loadMoviesAction(IMDB_Id))
+    }
+
   return (
     <div>
       <NavBar />
@@ -14,10 +30,11 @@ function Top250Movies() {
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">TITLE</h3>
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RATE</h3>
         </div>
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
+          {
+              moviesData.map((item, index) => {
+                  return (<ListItem key={index} movie={item} />)
+              })
+          }
       </center>
     </div>
   );
