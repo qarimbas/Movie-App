@@ -5,10 +5,11 @@ import { movieActions } from "../actions/movie.actions";
 
 function* loadMovieSaga(action) {
   try {
+    console.log(action.payload);
     const response = yield call(movieService.loadMovie, action.payload);
     console.log("response Movie Saga", response);
     if (response.status === 200) {
-      yield put(movieActions.loadMovieSuccessAction(response.data.items));
+      yield put(movieActions.loadMovieSuccessAction(response.data));
     } else {
       yield put(movieActions.loadMovieFailAction());
     }

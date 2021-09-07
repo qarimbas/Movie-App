@@ -2,7 +2,10 @@ const ListItem = (props) => {
   const movie = props.moviedata;
   return (
     <div
-      onClick={(event) => (window.location.href = `/moviedetails/${movie.id}`)}
+      onClick={(event) => (
+        (window.location.href = `/moviedetails/${movie.id}`),
+        console.log(movie.id + " selected")
+      )}
       className="mt-2 mb-2 flex justify-center flex-row .. bg-blue-300 text-gray-600 hover:bg-blue-400"
     >
       <text className="flex-1 mt-16 text-3xl font-bold">{movie.rank}</text>
