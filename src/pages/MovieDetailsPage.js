@@ -1,23 +1,33 @@
 import NavBar from "../components/NavBar/NavBar";
-import GridView from "../components/GridView";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { movieActions } from "../shared/store/actions/movie.actions";
+import { actorsActions } from "../shared/store/actions/actors.actions";
 import MovieDetail from "../components/MovieDetail/MovieDetail";
 import { useRouteMatch } from "react-router-dom";
 import { getMovieDataSelector } from "../shared/store/selectors/movie.selectors";
+import { getActorsDataSelector } from "../shared/store/selectors/actors.selectors";
+import GridView from "../components/GridView";
 
 function MovieDetailsPage() {
-  let match = useRouteMatch();
-  const dispatch = useDispatch();
+  let matchMovie = useRouteMatch();
+  let matchActor = useRouteMatch();
+  const dispatchMovie = useDispatch();
+  const dispatchActors = useDispatch();
   const movieData = useSelector(getMovieDataSelector);
+  const actorsData = useSelector(getActorsDataSelector);
 
   React.useEffect(() => {
     loadMovie();
-  }, [match.params.id]);
+    loadActors();
+  }, [matchMovie.params.id, matchActor.params.id]);
 
   const loadMovie = () => {
-    dispatch(movieActions.loadMovieAction(match.params.id));
+    dispatchMovie(movieActions.loadMovieAction(matchMovie.params.id));
+  };
+
+  const loadActors = () => {
+    dispatchActors(actorsActions.loadActorsAction(matchActor.params.id));
   };
 
   return (
@@ -27,16 +37,13 @@ function MovieDetailsPage() {
       <MovieDetail movieDetails={movieData} />
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Cast</h1>
-        <GridView />
+        {actorsData.length === 0 && (
+          <p className="text-blue-500">Loading Actors...</p>
+        )}
+        {actorsData.length !== 0 && <GridView actorsData={actorsData.actors} />}
       </center>
     </div>
   );
 }
 
 export default MovieDetailsPage;
-
-/*
-{movieData.map((item, index) => {
-        return <MovieDetail key={index} movie={item} />;
-      })}
- */

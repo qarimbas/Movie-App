@@ -2,7 +2,6 @@ import React from "react";
 
 const MovieDetail = (props) => {
   const movie = props.movieDetails;
-  console.log("MovieDetail", movie);
 
   return (
     <div>
