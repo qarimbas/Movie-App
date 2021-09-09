@@ -37,6 +37,9 @@ const Top250Movies = () => {
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">TITLE</h3>
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RATE</h3>
         </div>
+        {moviesData.length === 0 && (
+          <p className="text-blue-500 font-bold text-2xl">Loading...</p>
+        )}
         {moviesData
           .map((item, index) => {
             return <ListItem key={index} moviedata={item} />;

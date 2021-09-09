@@ -2,11 +2,12 @@
 import {Fragment} from "react";
 import {Disclosure, Menu, Transition} from "@headlessui/react";
 import {BellIcon, MenuIcon, XIcon} from "@heroicons/react/outline";
+import Search from "../Search/Search";
 
 const navigation = [
-  { name: "Dashboard", href: "/", current: true },
+  { name: "Home", href: "/", current: true },
   { name: "Top 250 Movies", href: "/top250/", current: false },
-  { name: "Search", href: "/search", current: false },
+  { name: "Users", href: "/users", current: false },
   { name: "Profile", href: "#", current: false },
 ];
 
@@ -66,6 +67,7 @@ export default function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <Search />
                 <button
                   type="button"
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
