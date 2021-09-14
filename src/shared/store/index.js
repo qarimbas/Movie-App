@@ -5,11 +5,13 @@ import rootSaga from "./sagas";
 import { moviesReducer } from "./reducers/movies.reducer";
 import { movieReducer } from "./reducers/movie.reducer";
 import { actorsReducer } from "./reducers/actors.reducer";
+import { searchReducer } from "./reducers/search.reducer";
 
 const reducers = combineReducers({
   movies: moviesReducer,
   moviedetail: movieReducer,
   actors: actorsReducer,
+  searchresult: searchReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

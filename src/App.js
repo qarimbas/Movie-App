@@ -11,7 +11,7 @@ import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/404";
 import Top250Movies from "./pages/Top250Movies";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
-import UsersPage from "./pages/SearchPage";
+import UsersPage from "./pages/UsersPage";
 import { store } from "./shared/store";
 
 const App = () => {
