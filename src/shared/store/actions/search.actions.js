@@ -8,11 +8,9 @@ const loadSearchAction = (payload) => {
 };
 
 const loadSearchSuccessAction = (payload) => {
-  console.log("payload: ", payload);
   return {
     type: moviesConstant.LOAD_SEARCH_LOADED,
     payload,
-
   };
 };
 

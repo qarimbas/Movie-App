@@ -18,7 +18,6 @@ export const searchReducer = (state = INITIAL_STATE, action) => {
         loading: true,
         loaded: false,
         loadFail: false,
-        data: action.payload,
       };
     }
     case moviesConstant.LOAD_SEARCH_LOADED: {
