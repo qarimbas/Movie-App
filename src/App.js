@@ -15,6 +15,7 @@ import MovieDetailsPage from "./pages/MovieDetailsPage";
 import { store } from "./shared/store";
 import AuthPage from "./pages/AuthPage";
 import UsersPage from "./pages/UsersPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/moviedetails/:id" component={MovieDetailsPage} />
           <Route path="/users/" component={UsersPage} />
           <Route path="/auth/" component={AuthPage} />
+          <Route path="/profile/" component={ProfilePage} />
           <Route path="/404" component={NotFoundPage} />
           <Redirect to="/404" />
         </Switch>
