@@ -6,6 +6,7 @@ import { nameActions } from "../shared/store/actions/name.actions";
 import { getNameDataSelector } from "../shared/store/selectors/name.selectors";
 import ActorDetails from "../components/NamePage/ActorDetails";
 import PlayedMoviesGridView from "../components/NamePage/PlayedMoviesGridView";
+import CastMovies from "../components/NamePage/CastMovies";
 
 function MovieDetailsPage() {
   let matchName = useRouteMatch();
@@ -29,7 +30,7 @@ function MovieDetailsPage() {
       {nameData.length === 0 && (
         <center>
           <h2 className="text-blue-500 text-5xl font-bold">
-            Loading Actor Details
+            Loading Actor Details...
           </h2>
         </center>
       )}
@@ -38,6 +39,7 @@ function MovieDetailsPage() {
           <h1 className="text-blue-500 text-5xl font-bold">{nameData.name}</h1>
           <ActorDetails actorDetails={nameData} />
           <PlayedMoviesGridView actorDetails={nameData} />
+          <CastMovies actorDetails={nameData} />
         </center>
       )}
     </div>
