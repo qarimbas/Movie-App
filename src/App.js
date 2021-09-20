@@ -16,6 +16,7 @@ import { store } from "./shared/store";
 import AuthPage from "./pages/AuthPage";
 import UsersPage from "./pages/UsersPage";
 import ProfilePage from "./pages/ProfilePage";
+import NamePage from "./pages/NamePage";
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -27,6 +28,7 @@ const App = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/top250/" component={Top250Movies} />
           <Route path="/moviedetails/:id" component={MovieDetailsPage} />
+          <Route path="/actordetails/:id" component={NamePage} />
           <Route path="/users/" component={UsersPage} />
           <Route path="/auth/" component={AuthPage} />
           <Route path="/profile/" component={ProfilePage} />

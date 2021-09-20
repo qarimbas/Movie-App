@@ -30,6 +30,8 @@ function MovieDetailsPage() {
     dispatchActors(actorsActions.loadActorsAction(matchActor.params.id));
   };
 
+  console.log("actorsData: ", actorsData);
+
   return (
     <div>
       <NavBar />

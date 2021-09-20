@@ -67,7 +67,7 @@ const style = {
   },
 };
 
-function Autocomplete({name, label, suggestions, value, setValue, ...rest}) {
+function Autocomplete({ name, label, suggestions, value, setValue, ...rest }) {
   const ref = React.useRef(null);
   const [activeSuggestion, setActiveSuggestion] = React.useState(0);
   const [showSuggestions, setShowSuggestions] = React.useState(false);
@@ -86,19 +86,19 @@ function Autocomplete({name, label, suggestions, value, setValue, ...rest}) {
   }, [showSuggestions, ref]);
 
   const handleChange = React.useCallback(
-      (e) => {
-        const userInput = e.currentTarget.value;
-        const filteredSuggestions = suggestions.filter(
-            (suggestion) =>
-                suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
-        );
+    (e) => {
+      const userInput = e.currentTarget.value;
+      const filteredSuggestions = suggestions.filter(
+        (suggestion) =>
+          suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+      );
 
-        setActiveSuggestion(0);
-        setFilteredSuggestions(filteredSuggestions);
-        setShowSuggestions(true);
-        setValue(e.currentTarget.value);
-      },
-      [setValue, suggestions]
+      setActiveSuggestion(0);
+      setFilteredSuggestions(filteredSuggestions);
+      setShowSuggestions(true);
+      setValue(e.currentTarget.value);
+    },
+    [setValue, suggestions]
   );
 
   const onClick = (e) => {
@@ -136,42 +136,42 @@ function Autocomplete({name, label, suggestions, value, setValue, ...rest}) {
   if (showSuggestions && value) {
     if (suggestions.length !== 0) {
       suggestionsListComponent = (
-          <ul className={style.suggestion.list}>
-            {filteredSuggestions.map((suggestion, index) => {
-              let className;
+        <ul className={style.suggestion.list}>
+          {filteredSuggestions.map((suggestion, index) => {
+            let className;
 
-              if (index === activeSuggestion) {
-                className = `${style.suggestion.item} ${style.suggestion.activeItem}`;
-              }
+            if (index === activeSuggestion) {
+              className = `${style.suggestion.item} ${style.suggestion.activeItem}`;
+            }
 
-              if (index !== activeSuggestion) {
-                className = style.suggestion.item;
-              }
-              return (
-                  <li className={className} key={suggestion} onClick={onClick}>
-                    {suggestion}
-                  </li>
-              );
-            })}
-          </ul>
+            if (index !== activeSuggestion) {
+              className = style.suggestion.item;
+            }
+            return (
+              <li className={className} key={suggestion} onClick={onClick}>
+                {suggestion}
+              </li>
+            );
+          })}
+        </ul>
       );
     }
   }
 
   return (
-      <div className={style.container}>
-        <label htmlFor={name} className={style.label}>
-          {label}
-        </label>
-        <input
-            autoComplete="off"
-            className={style.default}
-            onChange={handleChange}
-            onKeyDown={onKeyDown}
-            value={value}
-            {...rest}
-        />
-        {suggestionsListComponent}
-      </div>
+    <div className={style.container}>
+      <label htmlFor={name} className={style.label}>
+        {label}
+      </label>
+      <input
+        autoComplete="off"
+        className={style.default}
+        onChange={handleChange}
+        onKeyDown={onKeyDown}
+        value={value}
+        {...rest}
+      />
+      {suggestionsListComponent}
+    </div>
   );
 }
