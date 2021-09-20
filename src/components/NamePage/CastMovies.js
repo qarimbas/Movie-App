@@ -22,8 +22,8 @@ const CastMovies = (props) => {
           }
           className="group"
         >
-          <div className="mx-16 my-2 flex justify-evenly flex-row  text-gray-600 bg-blue-300">
-            <div className="my-2  flex justify-evenly flex-col  text-gray-600 bg-blue-300 hover:bg-blue-400">
+          <div className="mx-16 my-2 flex justify-evenly flex-row  text-gray-600 bg-blue-300 rounded-xl">
+            <div className="my-2  flex justify-evenly flex-col  text-gray-600 bg-blue-300 hover:bg-blue-400 rounded-xl">
               <h3 className="flex-1 justify-center  text-xl font-bold">
                 Title: {castmovie.title}
               </h3>

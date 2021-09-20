@@ -149,7 +149,15 @@ function Autocomplete({ name, label, suggestions, value, setValue, ...rest }) {
                 className="group"
               >
                 <li className={className} key={suggestion} onClick={onClick}>
-                  {suggestion.title}
+                  <div className={"flex justify-evenly flex-row"}>
+                    <img
+                      className="flex h-24 w-24 mx-2"
+                      src={suggestion.image}
+                    />
+                    <h2 className={"flex text-base font-bold my-4 mx-2"}>
+                      {suggestion.title}
+                    </h2>
+                  </div>
                 </li>
               </div>
             );
