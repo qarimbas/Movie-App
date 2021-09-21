@@ -17,6 +17,7 @@ import AuthPage from "./pages/AuthPage";
 import UsersPage from "./pages/UsersPage";
 import ProfilePage from "./pages/ProfilePage";
 import NamePage from "./pages/NamePage";
+import NewCommentPage from "./pages/NewCommentPage";
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -31,6 +32,9 @@ const App = () => {
           <Route path="/actordetails/:id" component={NamePage} />
           <Route path="/users/" component={UsersPage} />
           <Route path="/auth/" component={AuthPage} />
+          {authCtx.isLoggedIn && (
+            <Route path="/new-comment" component={NewCommentPage} />
+          )}
           <Route path="/profile/" component={ProfilePage} />
           <Route path="/404" component={NotFoundPage} />
           <Redirect to="/404" />

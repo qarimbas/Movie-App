@@ -43,7 +43,15 @@ function ProfilePage() {
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Your Profile</h1>
       </center>
+
       <br />
+      <div className={classes.action}>
+        <center>
+          <button onClick={(event) => (window.location.href = "/new-comment")}>
+            Add a comment
+          </button>
+        </center>
+      </div>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="new-password">New Password</label>
