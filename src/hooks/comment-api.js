@@ -6,7 +6,7 @@ export async function getAllQuotes() {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "Could not fetch quotes.");
+    throw new Error(data.message || "Could not fetch comments.");
   }
 
   const transformedQuotes = [];

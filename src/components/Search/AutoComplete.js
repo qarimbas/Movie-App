@@ -80,12 +80,16 @@ function Autocomplete({ name, label, suggestions, value, setValue, ...rest }) {
 
   const handleChange = React.useCallback(
     (e) => {
+      let filteredSuggestions = [];
       const userInput = e.currentTarget.value;
-      const filteredSuggestions = suggestions.filter(
-        (suggestion) =>
-          suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
-      );
-
+      if (suggestions.length) {
+        filteredSuggestions = suggestions.filter((suggestion) => {
+          console.log(suggestion);
+          return (
+            suggestion.title.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+          );
+        });
+      }
       setActiveSuggestion(0);
       setFilteredSuggestions(filteredSuggestions);
       setShowSuggestions(true);
