@@ -14,7 +14,7 @@ import Top250Movies from "./pages/Top250Movies";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import { store } from "./shared/store";
 import AuthPage from "./pages/AuthPage";
-import UsersPage from "./pages/UsersPage";
+import ComingSoonPage from "./pages/UsersPage";
 import ProfilePage from "./pages/ProfilePage";
 import NamePage from "./pages/NamePage";
 import NewCommentPage from "./pages/NewCommentPage";
@@ -30,8 +30,9 @@ const App = () => {
           <Route path="/top250/" component={Top250Movies} />
           <Route path="/moviedetails/:id" component={MovieDetailsPage} />
           <Route path="/actordetails/:id" component={NamePage} />
-          <Route path="/users/" component={UsersPage} />
-          <Route path="/auth/" component={AuthPage} />
+          <Route path="/comingsoon/" component={ComingSoonPage} />
+
+          {!authCtx.isLoggedIn && <Route path="/auth/" component={AuthPage} />}
           {authCtx.isLoggedIn && (
             <Route path="/new-comment" component={NewCommentPage} />
           )}

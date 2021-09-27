@@ -8,7 +8,7 @@ import AuthContext from "../../shared/store/auth-context";
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Top 250 Movies", href: "/top250/", current: false },
-  { name: "Users", href: "/users", current: false },
+  { name: "Coming Soon", href: "/comingsoon", current: false },
   { name: "Sign Up & Login", href: "/auth", current: false },
 ];
 

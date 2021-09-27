@@ -4,8 +4,25 @@ import React, { useEffect } from "react";
 import useHttp from "../hooks/use-http";
 import { getAllQuotes } from "../hooks/comment-api";
 import CommentList from "../components/comments/CommentList";
+import { useDispatch, useSelector } from "react-redux";
+import { getInTheatersDataSelector } from "../shared/store/selectors/inTheaters.selectors";
+import { inTheatersActions } from "../shared/store/actions/intheatres.actions";
+import HomeGridView from "../components/MovieDetail/HomeGridView";
 
 function HomePage() {
+  const dispatch = useDispatch();
+  const inTheatersData = useSelector(getInTheatersDataSelector);
+
+  useEffect(() => {
+    loadInTheaters();
+  }, []);
+
+  const loadInTheaters = () => {
+    dispatch(inTheatersActions.loadInTheatersAction());
+  };
+
+  console.log("intheaters data: ", inTheatersData);
+
   const {
     sendRequest,
     status,
@@ -42,7 +59,12 @@ function HomePage() {
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Home</h1>
       </center>
-      <CommentList quotes={loadedQuotes} />
+      <div className="flex flex-row">
+        <div className="flex flex-col">
+          <CommentList quotes={loadedQuotes} />
+        </div>
+        <HomeGridView inTheaters={inTheatersData} />
+      </div>
     </div>
   );
 }
