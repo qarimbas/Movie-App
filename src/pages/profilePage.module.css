@@ -11,7 +11,7 @@
 .control label {
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #353336;
+    color: #3b82f6;
     display: block;
 }
 
@@ -34,12 +34,12 @@
     cursor: pointer;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
-    background-color: #38015c;
+    background-color: #3b82f6;
     color: white;
-    border: 1px solid #38015c;
+    border: 1px solid #3b82f6;
 }
 
 .action button:hover {
-    background-color: #540d83;
-    border-color: #540d83;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
 }

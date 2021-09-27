@@ -38,7 +38,7 @@ const CommentList = (props) => {
           Sort {isSortingAscending ? "Descending" : "Ascending"}
         </button>
       </div>
-      <ul className={classes.list}>
+      <ul className="flex-row ">
         {sortedQuotes.map((quote) => (
           <CommentItem
             key={quote.id}
