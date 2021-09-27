@@ -8,6 +8,7 @@ import { actorsReducer } from "./reducers/actors.reducer";
 import { searchReducer } from "./reducers/search.reducer";
 import { nameReducer } from "./reducers/name.reducer";
 import { inTheatersReducer } from "./reducers/intheaters.reducer";
+import { comingSoonReducer } from "./reducers/comingsoon.reducer";
 
 const reducers = combineReducers({
   movies: moviesReducer,
@@ -16,6 +17,7 @@ const reducers = combineReducers({
   searchresult: searchReducer,
   namedetail: nameReducer,
   in_theaters: inTheatersReducer,
+  coming_soon: comingSoonReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

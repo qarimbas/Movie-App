@@ -14,7 +14,7 @@ import Top250Movies from "./pages/Top250Movies";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import { store } from "./shared/store";
 import AuthPage from "./pages/AuthPage";
-import ComingSoonPage from "./pages/UsersPage";
+import ComingSoonPage from "./pages/ComingSoonPage";
 import ProfilePage from "./pages/ProfilePage";
 import NamePage from "./pages/NamePage";
 import NewCommentPage from "./pages/NewCommentPage";

@@ -21,8 +21,6 @@ function HomePage() {
     dispatch(inTheatersActions.loadInTheatersAction());
   };
 
-  console.log("intheaters data: ", inTheatersData);
-
   const {
     sendRequest,
     status,
@@ -63,7 +61,12 @@ function HomePage() {
         <div className="flex flex-col">
           <CommentList quotes={loadedQuotes} />
         </div>
-        <HomeGridView inTheaters={inTheatersData} />
+        {inTheatersData.length === 0 && (
+          <p className="text-blue-500">Loading Movies...</p>
+        )}
+        {inTheatersData.length !== 0 && (
+          <HomeGridView inTheaters={inTheatersData} />
+        )}
       </div>
     </div>
   );

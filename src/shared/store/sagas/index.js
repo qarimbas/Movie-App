@@ -5,6 +5,7 @@ import { actorsWatcherSaga } from "./actors.saga";
 import { searchWatcherSaga } from "./search.saga";
 import { nameWatcherSaga } from "./name.saga";
 import { inTheatersWatcherSaga } from "./intheaters.saga";
+import { comingSoonWatcherSaga } from "./comingsoon.saga";
 
 export default function* rootSaga() {
   yield all([
@@ -14,5 +15,6 @@ export default function* rootSaga() {
     searchWatcherSaga(),
     nameWatcherSaga(),
     inTheatersWatcherSaga(),
+    comingSoonWatcherSaga(),
   ]);
 }
