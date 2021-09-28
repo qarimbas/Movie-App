@@ -1,11 +1,9 @@
 import axios from "axios";
+import { IMDB_Id, IMDBFullCast_Url } from "../constants/imdb.constants";
 
 class ActorsService {
   async loadActors(selected_movie_id) {
-    console.log("actorsService of ", selected_movie_id);
-    return await axios.get(
-      `https://imdb-api.com/API/FullCast/k_hha1j719/${selected_movie_id}`
-    );
+    return await axios.get(`${IMDBFullCast_Url}${IMDB_Id}${selected_movie_id}`);
   }
 }
 
