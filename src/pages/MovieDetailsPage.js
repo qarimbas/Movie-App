@@ -33,7 +33,7 @@ function MovieDetailsPage() {
   console.log("actorsData: ", actorsData);
 
   return (
-    <div>
+    <div className="bg-gray-700">
       <NavBar />
       <br />
       <MovieDetail movieDetails={movieData} />

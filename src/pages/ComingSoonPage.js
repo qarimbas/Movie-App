@@ -18,7 +18,7 @@ function ComingSoonPage() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-600">
       <NavBar />
       <br />
       <center>

@@ -37,7 +37,7 @@ function ProfilePage() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-600">
       <NavBar />
       <br />
       <center>
@@ -66,6 +66,19 @@ function ProfilePage() {
           <button>Change Password</button>
         </div>
       </form>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

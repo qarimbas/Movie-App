@@ -50,7 +50,9 @@ const CommentForm = (props) => {
           )}
 
           <div className={classes.control}>
-            <label htmlFor="author">Author</label>
+            <label className="text-color-blue" htmlFor="author">
+              Author
+            </label>
             <input type="text" id="author" ref={authorInputRef} />
           </div>
           <div className={classes.control}>

@@ -27,7 +27,7 @@ const Top250Movies = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="bg-gray-700">
       <NavBar />
       <br />
       <center>

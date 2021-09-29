@@ -74,7 +74,7 @@ function AuthPage() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-600">
       <NavBar />
       <br />
       <center>
@@ -116,6 +116,13 @@ function AuthPage() {
           </div>
         </form>
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

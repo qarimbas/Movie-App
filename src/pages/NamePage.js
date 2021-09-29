@@ -24,7 +24,7 @@ function MovieDetailsPage() {
   console.log("nameData: ", nameData);
 
   return (
-    <div>
+    <div className="bg-gray-700">
       <NavBar />
       <br />
       {nameData.length === 0 && (

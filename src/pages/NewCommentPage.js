@@ -21,7 +21,7 @@ function NewCommentPage() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-700">
       <NavBar />
       <br />
       <center>
@@ -37,6 +37,13 @@ function NewCommentPage() {
           />
         </center>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

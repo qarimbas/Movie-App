@@ -1,5 +1,6 @@
 .form {
     position: relative;
+
 }
 
 .loading {
@@ -14,6 +15,7 @@
 
 .control {
     margin-bottom: 0.5rem;
+    color: dodgerblue;
 }
 
 .control label {

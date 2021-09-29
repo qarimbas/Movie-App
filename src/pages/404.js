@@ -2,7 +2,7 @@ import React from "react";
 
 function NotFoundPage() {
   return (
-    <div>
+    <div className="bg-gray-600">
       <center>
         <h1 className="px-20 py-20 text-blue-500 text-8xl font-bold">
           404 Not Found!
@@ -16,6 +16,18 @@ function NotFoundPage() {
           </p>
         </button>
       </center>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

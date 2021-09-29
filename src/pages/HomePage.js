@@ -52,12 +52,12 @@ function HomePage() {
   }
 
   return (
-    <div>
+    <div className="bg-gray-600">
       <NavBar />
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Home</h1>
       </center>
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-evenly">
         <div className="flex flex-col">
           <CommentList quotes={loadedQuotes} />
         </div>

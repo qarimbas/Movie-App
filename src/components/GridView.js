@@ -16,7 +16,7 @@ const GridView = (props) => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-700">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Actors</h2>
 
@@ -37,10 +37,10 @@ const GridView = (props) => {
                     className="w-full h-full object-center object-cover group-hover:opacity-75"
                   />
                 </div>
-                <h3 className="mt-4 text-sm text-gray-700">
+                <h3 className="mt-4 text-sm text-blue-300">
                   {actor.asCharacter}
                 </h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">
+                <p className="mt-1 text-lg font-medium text-blue-300">
                   {actor.name}
                 </p>
               </a>
