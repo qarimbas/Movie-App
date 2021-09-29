@@ -1,5 +1,20 @@
+import { useState } from "react";
+
 const GridView = (props) => {
   const actors = props.actorsData;
+  const [gridViewNumber, setGridViewNumber] = useState(8);
+  const [showLess, setShowLess] = useState(true);
+
+  const showMoreHandler = () => {
+    setGridViewNumber(actors.length);
+    setShowLess(false);
+  };
+
+  const showLessHandler = () => {
+    setGridViewNumber(8);
+    setShowLess(true);
+  };
+
   return (
     <div className="bg-white">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -30,8 +45,24 @@ const GridView = (props) => {
                 </p>
               </a>
             ))
-            .slice(0, 5)}
+            .slice(0, gridViewNumber)}
         </div>
+        {showLess && (
+          <button
+            className="bg-gray-600 text-blue-300 hover:bg-blue-400 rounded-xl px-4 py-2"
+            onClick={showMoreHandler}
+          >
+            Show More
+          </button>
+        )}
+        {!showLess && (
+          <button
+            className="bg-gray-600 text-blue-300 hover:bg-blue-400 rounded-xl px-4 py-2"
+            onClick={showLessHandler}
+          >
+            Show Less
+          </button>
+        )}
       </div>
     </div>
   );

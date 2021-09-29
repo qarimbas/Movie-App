@@ -32,7 +32,7 @@ const Top250Movies = () => {
       <br />
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Top 250 Movies</h1>
-        <div className="my-5 py-3 flex justify-center flex-row  bg-blue-300">
+        <div className="my-5 py-3 flex justify-center flex-row  bg-gray-600">
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RANK</h3>
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">TITLE</h3>
           <h3 className="flex-1 ... text-blue-500 text-xl font-bold">RATE</h3>

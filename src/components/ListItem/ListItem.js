@@ -6,7 +6,7 @@ const ListItem = (props) => {
         (window.location.href = `/moviedetails/${movie.id}`),
         console.log(movie.id + " selected")
       )}
-      className="mt-2 mb-2 flex justify-center flex-row .. bg-blue-300 text-gray-600 hover:bg-blue-400"
+      className="mt-2 mb-2 flex justify-center flex-row .. bg-gray-600 text-blue-500 hover:bg-gray-500 rounded-xl mx-4"
     >
       <text className="flex-1 mt-16 text-3xl font-bold">{movie.rank}</text>
       <img className="h-48 w-48 mx-10" src={movie.image} />

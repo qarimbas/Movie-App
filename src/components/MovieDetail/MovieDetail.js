@@ -8,7 +8,7 @@ const MovieDetail = (props) => {
       <center>
         <h1 className="text-blue-500 text-5xl font-bold">Movie Details</h1>
         <br />
-        <div className="mt-2 mb-2 py-16 flex justify-evenly flex-row .. bg-blue-300 text-gray-600">
+        <div className="mt-2 mb-2 py-16 flex justify-evenly flex-row .. bg-gray-600 text-blue-300 rounded-xl mx-4">
           <img className="h-64 w-64 mx-10" src={movie.image} />
           <div className="flex-2" />
           <div className="flex flex-col ..">
@@ -18,7 +18,7 @@ const MovieDetail = (props) => {
             <text className="flex-1 .. ">{movie.plot}</text>
           </div>
         </div>
-        <div className="mt-2 mb-2 py-4 flex justify-evenly flex-row .. bg-blue-300 text-gray-600">
+        <div className="mt-2 mb-2 py-4 flex justify-evenly flex-row .. bg-gray-600 text-blue-300 rounded-xl	mx-12">
           <text className="text-3xl font-bold">
             IMDb: {movie.imDbRating}/10
           </text>
@@ -28,8 +28,8 @@ const MovieDetail = (props) => {
         </div>
       </center>
       <div className="flex flex-row justify-evenly">
-        <div className="my-2  flex justify-evenly flex-col  text-gray-600 bg-blue-300">
-          <div className=" flex justify-center  text-xl font-bold bg-gray-300">
+        <div className="my-2  flex justify-evenly flex-col  text-blue-300 bg-gray-600 rounded-xl mx-8">
+          <div className=" flex justify-center  text-xl font-bold bg-blue-300 text-gray-600 rounded-xl mx-12">
             <text>CREATORS</text>
           </div>
           <h3 className="flex justify-center  text-xl font-bold">
@@ -48,8 +48,8 @@ const MovieDetail = (props) => {
             Language: {movie.languages}
           </h3>
         </div>
-        <div className="my-2 py-4 flex justify-evenly flex-col  text-gray-600 bg-blue-300">
-          <div className=" flex justify-center  text-xl font-bold bg-gray-300">
+        <div className="my-2 py-4 flex justify-evenly flex-col  text-blue-300 bg-gray-600 rounded-xl mx-8">
+          <div className="flex justify-center  text-xl font-bold bg-blue-300 text-gray-600 rounded-xl mx-12">
             <text>INFORMATION</text>
           </div>
           <h3 className="flex justify-center  text-xl font-bold">
