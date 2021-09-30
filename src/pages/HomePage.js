@@ -61,11 +61,19 @@ function HomePage() {
         <div className="flex flex-col">
           <CommentList quotes={loadedQuotes} />
         </div>
+
         {inTheatersData.length === 0 && (
           <p className="text-blue-500">Loading Movies...</p>
         )}
         {inTheatersData.length !== 0 && (
-          <HomeGridView inTheaters={inTheatersData} />
+          <div>
+            <center>
+              <h1 className="mt-4 text-blue-500 text-3xl font-bold">
+                In Theaters
+              </h1>
+            </center>
+            <HomeGridView inTheaters={inTheatersData} />
+          </div>
         )}
       </div>
     </div>
