@@ -22,8 +22,17 @@ const Top250Movies = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastPost = currentPage * 25;
   const indexOfFirstPost = indexOfLastPost - 25;
-  const paginateFront = () => setCurrentPage(currentPage + 1);
-  const paginateBack = () => setCurrentPage(currentPage - 1);
+  let style;
+  const paginateFront = () => {
+    if (currentPage !== 10) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+  const paginateBack = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -78,7 +87,12 @@ const Top250Movies = () => {
                 className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                 aria-label="Pagination"
               >
-                <a className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                <a
+                  onClick={() => {
+                    paginateBack();
+                  }}
+                  className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                >
                   <span className="sr-only">Previous</span>
                   <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
                 </a>
@@ -88,7 +102,7 @@ const Top250Movies = () => {
                     paginate(1);
                   }}
                   aria-current="page"
-                  className="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                  className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
                 >
                   1
                 </a>
@@ -96,7 +110,7 @@ const Top250Movies = () => {
                   onClick={() => {
                     paginate(2);
                   }}
-                  className="bg-white border-gray-300 text-gray-500 hover:bg-indigo-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                  className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
                 >
                   2
                 </a>
@@ -164,7 +178,12 @@ const Top250Movies = () => {
                 >
                   10
                 </a>
-                <a className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                <a
+                  onClick={() => {
+                    paginateFront();
+                  }}
+                  className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                >
                   <span className="sr-only">Next</span>
                   <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
                 </a>
