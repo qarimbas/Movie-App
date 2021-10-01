@@ -22,7 +22,7 @@ const Top250Movies = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastPost = currentPage * 25;
   const indexOfFirstPost = indexOfLastPost - 25;
-  let style;
+
   const paginateFront = () => {
     if (currentPage !== 10) {
       setCurrentPage(currentPage + 1);
@@ -54,7 +54,7 @@ const Top250Movies = () => {
             return <ListItem key={index} moviedata={item} />;
           })
           .slice(indexOfFirstPost, indexOfLastPost)}
-        <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+        <div className="bg-gray-700 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 ">
           <div className="flex-1 flex justify-between sm:hidden">
             <a
               onClick={() => {
@@ -75,7 +75,7 @@ const Top250Movies = () => {
           </div>
           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm text-gray-700">
+              <p className="text-sm text-blue-500">
                 Showing{" "}
                 <span className="font-medium">{indexOfFirstPost + 1}</span> to{" "}
                 <span className="font-medium">{indexOfLastPost}</span> of{" "}
