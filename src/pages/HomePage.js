@@ -47,9 +47,11 @@ function HomePage() {
     return <p className="centered focused">{error}</p>;
   }
 
+ /*
   if (status === "completed" && (!loadedQuotes || loadedQuotes.length === 0)) {
     return <p>No comments were found.</p>;
   }
+ */
 
   return (
     <div className="bg-gray-600">
